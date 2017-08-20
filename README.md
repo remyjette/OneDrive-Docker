@@ -57,8 +57,8 @@ docker start onedrive
 If you would like this container to skip any file patterns, set the
 `SKIP_FILES` environment variable. Patterns are case insensitive. `*` and `?`
 wildcards characters are supported. Use `|` to separate multiple patterns.
-By default, the pattern is ".\*|~\*", skipping all files that begin with a
-`.` or `~`
+By default, the pattern is `.*|~*`, skipping all files that begin with a
+`.` or `~`.
 
 #### Selective Sync
 
