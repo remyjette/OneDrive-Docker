@@ -62,7 +62,7 @@ By default, the pattern is `.*|~*`, skipping all files that begin with a
 
 #### Selective Sync
 
-To use Selective sync, create a file named `skip_file` and list the files
+To use Selective sync, create a file named `sync_list` and list the files
 and folders you want to sync. Each line of the file represents a path to a
 file or directory relative from the root of your OneDrive.
 
@@ -74,11 +74,11 @@ Work/ProjectX
 notes.txt
 ```
 
-Once you have created your `skip_file`, mount it in your container as `/skip_file`:
+Once you have created your `sync_list`, mount it in your container as `/sync_list`:
 
 ```shell
 docker run -it --restart on-failure --name onedrive
   -v /path/to/onedrive:/onedrive
-  -v /path/to/skip_file:/skip_file
+  -v /path/to/sync_list:/sync_list
   remyjette/onedrive
 ```
